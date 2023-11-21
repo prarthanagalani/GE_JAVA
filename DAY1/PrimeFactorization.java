@@ -13,7 +13,7 @@ public class PrimeFactorization {
             n = n/i;
          }
       }
-      if(n >2) {
+      if(n >= 2) {
          System.out.println(n);
       }
    }
