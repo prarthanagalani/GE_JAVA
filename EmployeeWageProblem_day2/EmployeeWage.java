@@ -1,6 +1,7 @@
 package GE_JAVA.EmployeeWageProblem_day2;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class EmployeeWage{
 
@@ -13,20 +14,41 @@ public class EmployeeWage{
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program");
 
-        //use case 1
-        checkEmployeeAttendance();
+        System.out.println("Select an option:");
+        System.out.println("1. Check Employee is Present or Absent");
+        System.out.println("2. Calculate Daily Employee Wage");
+        System.out.println("3. Add Part-time Employee & Wage");
+        System.out.println("4. Calculate Wages for a Month");
+        System.out.println("5. Calculate Wages till a condition is reached for a month");
 
-        //use case 2
-        calculateDailyWage();
+        Scanner sc = new Scanner(System.in);
+        int option = sc.nextInt();
 
-        //use case 3
-        addPartTimeEmployee();
 
-        //use case 4
-        calculateWagesForMonth();
+        // use case 6
+        switch (option) {
+            case 1:
+                checkEmployeeAttendance();
+                break;
+            case 2:
+                calculateDailyWage();
+                break;
+            case 3:
+                addPartTimeEmployee();
+                break;
+            case 4:
+                calculateWagesForMonth();
+                break;
+            case 5:
+                calculateWagesTillCondition();
+                break;
+            default:
+                System.out.println("Invalid option");
+        }
 
-        //use case 5
-        calculateWagesTillCondition();
+        sc.close();
+
+       
     }
 
     // Use Case 1
