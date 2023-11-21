@@ -21,6 +21,9 @@ public class EmployeeWage{
 
         //use case 3
         addPartTimeEmployee();
+
+        //use case 4
+        calculateWagesForMonth();
     }
 
     // Use Case 1
@@ -40,6 +43,12 @@ public class EmployeeWage{
     private static void addPartTimeEmployee() {
         int partTimeWage = WAGE_PER_HOUR * PART_TIME_HOURS;
         System.out.println("Part-time Employee Wage: " + partTimeWage);
+    }
+
+    // Use Case 4
+    private static void calculateWagesForMonth() {
+        int monthlyWage = WAGE_PER_HOUR * FULL_DAY_HOURS * WORKING_DAYS_PER_MONTH;
+        System.out.println("Monthly Employee Wage: " + monthlyWage);
     }
 
 }
