@@ -18,6 +18,9 @@ public class EmployeeWage{
 
         //use case 2
         calculateDailyWage();
+
+        //use case 3
+        addPartTimeEmployee();
     }
 
     // Use Case 1
@@ -31,6 +34,12 @@ public class EmployeeWage{
     private static void calculateDailyWage() {
         int dailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
         System.out.println("Daily Employee Wage: " + dailyWage);
+    }
+
+    // Use Case 3
+    private static void addPartTimeEmployee() {
+        int partTimeWage = WAGE_PER_HOUR * PART_TIME_HOURS;
+        System.out.println("Part-time Employee Wage: " + partTimeWage);
     }
 
 }
