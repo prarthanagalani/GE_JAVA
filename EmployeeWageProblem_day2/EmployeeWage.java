@@ -15,6 +15,9 @@ public class EmployeeWage{
 
         //use case 1
         checkEmployeeAttendance();
+
+        //use case 2
+        calculateDailyWage();
     }
 
     // Use Case 1
@@ -22,6 +25,12 @@ public class EmployeeWage{
         Random random = new Random();
         int attendance = random.nextInt(2); // 0 for absent, 1 for present
         System.out.println("Employee is " + (attendance == 1 ? "Present" : "Absent"));
+    }
+
+    // Use Case 2
+    private static void calculateDailyWage() {
+        int dailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
+        System.out.println("Daily Employee Wage: " + dailyWage);
     }
 
 }
