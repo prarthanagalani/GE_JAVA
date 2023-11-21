@@ -24,6 +24,9 @@ public class EmployeeWage{
 
         //use case 4
         calculateWagesForMonth();
+
+        //use case 5
+        calculateWagesTillCondition();
     }
 
     // Use Case 1
@@ -49,6 +52,20 @@ public class EmployeeWage{
     private static void calculateWagesForMonth() {
         int monthlyWage = WAGE_PER_HOUR * FULL_DAY_HOURS * WORKING_DAYS_PER_MONTH;
         System.out.println("Monthly Employee Wage: " + monthlyWage);
+    }
+
+    // Use Case 5
+    private static void calculateWagesTillCondition() {
+        int totalWorkingHours = 0;
+        int totalWorkingDays = 0;
+
+        while (totalWorkingHours < MAX_WORKING_HOURS && totalWorkingDays < WORKING_DAYS_PER_MONTH) {
+            totalWorkingHours += FULL_DAY_HOURS;
+            totalWorkingDays++;
+        }
+
+        int totalWage = WAGE_PER_HOUR * totalWorkingHours;
+        System.out.println("Wages till condition: " + totalWage);
     }
 
 }
