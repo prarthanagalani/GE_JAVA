@@ -14,14 +14,15 @@ public class EmployeeWage{
         System.out.println("Welcome to Employee Wage Computation Program");
 
         //use case 1
-        checkEmployeeAttendance();
+        int attendance = checkEmployeeAttendance();
+        System.out.println("Employee is " + (attendance == 1 ? "Present" : "Absent"));
     }
 
     // Use Case 1
     private static void checkEmployeeAttendance() {
         Random random = new Random();
         int attendance = random.nextInt(2); // 0 for absent, 1 for present
-        System.out.println("Employee is " + (attendance == 1 ? "Present" : "Absent"));
+        return attendance;
     }
 
 }
